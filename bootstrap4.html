@@ -1,0 +1,162 @@
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <title>Task 4</title>
+    <style>
+        .card {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        
+        .card {
+            margin-top: 10px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            background-clip: padding-box;
+            min-height: 400px;
+        }
+        
+        .card span.card-title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        
+        .card .card-image {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card .card-image img {
+            border-radius: 2px 2px 0 0;
+            background-clip: padding-box;
+            position: relative;
+            z-index: -1;
+        }
+        
+        .card .card-image span.card-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 16px;
+        }
+        
+        .card .card-content {
+            padding: 16px;
+            border-radius: 0 0 2px 2px;
+            background-clip: padding-box;
+            box-sizing: border-box;
+        }
+        
+        .card .card-content p {
+            margin: 0;
+            color: inherit;
+        }
+        
+        .card .card-content span.card-title {
+            line-height: 48px;
+        }
+        
+        .card .card-action {
+            border-top: 1px solid rgba(160, 160, 160, 0.2);
+            padding: 16px;
+        }
+        
+        .card .card-action a {
+            color: #ffab40;
+            margin-right: 16px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .card .card-action a:hover {
+            color: #ffd8a6;
+            text-decoration: none;
+        }
+        .image{
+            height:280px;
+        }
+    </style>
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/../executers/vi-tr.js"></script></head>
+<body __processed_e1d7b606-8fe6-4dfe-ae97-45c8792412b3__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNSIsInNjb3JlIjoyMDAxNX1d">
+    <div class="container" bis_skin_checked="1">
+        <div class="row" bis_skin_checked="1">
+            <div class="col-sm-3" bis_skin_checked="1">
+                <div class="card" bis_skin_checked="1">
+                    <div class="card-image" bis_skin_checked="1">
+                        <img class="image image-responsive" src="imga.jpg">
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content" bis_skin_checked="1">
+                        <p>Cards for display in portfolio style material design by Google.</p>
+                    </div>
+
+                    <div class="card-action" bis_skin_checked="1">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-3" bis_skin_checked="1">
+                <div class="card" bis_skin_checked="1">
+                    <div class="card-image" bis_skin_checked="1">
+                        <img class="img-responsive" src="imgb.jpg">
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content" bis_skin_checked="1">
+                        <p>Cards for display in portfolio style material design by Google.</p>
+                    </div>
+
+                    <div class="card-action" bis_skin_checked="1">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" bis_skin_checked="1">
+                <div class="card" bis_skin_checked="1">
+                    <div class="card-image" bis_skin_checked="1">
+                        <img class="img-responsive" src="imgb.jpg">
+
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content" bis_skin_checked="1">
+                        <p>Cards for display in portfolio style material design by Google.</p>
+                    </div>
+
+                    <div class="card-action" bis_skin_checked="1">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" bis_skin_checked="1">
+                <div class="card" bis_skin_checked="1">
+                    <div class="card-image" bis_skin_checked="1">
+                        <img class="img-responsive" src="imgb.jpg">
+                        <span class="card-title">Material Cards</span>
+                    </div>
+
+                    <div class="card-content" bis_skin_checked="1">
+                        <p>Cards for display in portfolio style material design by Google.</p>
+                    </div>
+
+                    <div class="card-action" bis_skin_checked="1">
+                        <a href="#" target="new_blank">Link</a>
+                        <a href="#" target="new_blank">Link</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body></html>

@@ -1,0 +1,165 @@
+<html lang="en">
+    <title>Task 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+          }
+          
+          body {
+            background-color: #eee;
+          }
+          
+          #wrapper {
+            width: 500px;
+            overflow: hidden;
+            border: 0px solid #000;
+            margin: 50px auto;
+            padding: 10px;
+          }
+          
+          .main-content {
+            width: 450px;
+            height: 50%;
+            margin: 10px auto;
+            background-color: #fff;
+            border: 2px solid #e6e6e6;
+            padding: 40px 50px;
+          }
+          
+          .header {
+            border: 0px solid #000;
+            margin-bottom: 5px;
+            padding-right: 50px;
+            text-align: center;
+          }
+          
+          .header img {
+            height: 50px;
+            width: 175px;
+            margin: auto;
+            position: relative;
+            left: 40px;
+          }
+          
+          .input-1,
+          .input-2 {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 8px 12px;
+            border: 1px solid #dbdbdb;
+            box-sizing: border-box;
+            border-radius: 3px;
+          }
+          
+          .overlap-text {
+            position: relative;
+          }
+          
+          .overlap-text a {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            color: #003569;
+            font-size: 14px;
+            text-decoration: none;
+            font-family: 'Overpass Mono', monospace;
+            letter-spacing: -1px;
+          }
+          
+          .btn {
+            width: 100%;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            padding: 5px 12px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+          }
+          
+          .sub-content {
+            width: 450px;
+            height: 40%;
+            margin: 10px auto;
+            
+            padding: 20px 50px;
+            background-color: transparent;
+          }
+          
+          .s-part {
+            text-align: center;
+            font-family: 'Overpass ', monospace;
+            word-spacing: -3px;
+            letter-spacing: -2px;
+            font-weight: normal;
+          }
+          
+          .s-part a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #3897f0;
+            font-family: 'Overpass Mono', monospace;
+            word-spacing: -3px;
+            letter-spacing: -2px;
+            font-weight: normal;
+          }
+    </style>
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/../executers/vi-tr.js"></script></head>
+<body __processed_87eba083-d2b5-4009-94c7-29bf251284bc__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNSIsInNjb3JlIjoyMDAxNX1d">
+    <div id="wrapper" bis_skin_checked="1">
+        <div class="main-content" bis_skin_checked="1">
+          <div class="header" bis_skin_checked="1">
+            <img src="instagram.jpg">
+          </div>
+          <div class="l-part" bis_skin_checked="1">
+              <div class="input-group mb-3" bis_skin_checked="1">
+                  <div class="input-group-text" bis_skin_checked="1"><i class="fa fa-user" aria-hidden="true"></i></div>
+                  <input type="text" class="form-control" placeholder="Username" required="">  
+              </div>
+      
+              <div class="input-group mb-3" bis_skin_checked="1">
+                  <div class="input-group-text" bis_skin_checked="1"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                  <input type="password" class="form-control" placeholder="Password" required="">  
+              </div>
+            
+              <input type="button" value="Log in" class="btn" id="loginBtn">
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;" bis_skin_checked="1">
+              <div bis_skin_checked="1"><input type="checkbox"><label>Remember me</label></div>
+              <a href="#" style="text-decoration: none;">Forgot Password?</a>
+          </div>
+          
+        </div>
+        <div class="sub-content" bis_skin_checked="1">
+          <div class="s-part" bis_skin_checked="1">
+            Don't have an account!<a href="#">Sign up here.</a>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var usernameInput = document.querySelector('input[type="text"]');
+          var passwordInput = document.querySelector('input[type="password"]');
+          var loginButton = document.getElementById('loginBtn');
+          loginButton.addEventListener("click", function () {
+            var usernameValue = usernameInput.value.trim();
+            var passwordValue = passwordInput.value.trim();
+            if (usernameValue === "") {
+              alert("Please enter a username.");
+              return;
+            }
+            if (passwordValue === "") {
+              alert("Please enter a password.");
+              return;
+            }
+            alert("Login successful!");
+          });
+        });
+      </script>
+
+    
+
+</body></html>

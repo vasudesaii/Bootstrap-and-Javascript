@@ -1,0 +1,33 @@
+<html>
+<title>Task 3 : Multiplication and Division</title>
+    <body>
+        <h1>Multiplication and Division</h1>
+        <label>Enter 1st number: </label>
+        <input type="number" id="input1"><br><br>
+        <label>Enter 2nd number: </label>
+        <input type="number" id="input2"><br><br>
+        <button onclick="multiplication()"> Multiplication</button>
+        <button onclick="division()">Division</button><br><br>
+
+        <p id="result"></p>
+
+        <script>
+            function multiplication(input1,input2){
+                var input1 = parseFloat(document.getElementById("input1").value);
+                var input2 = parseFloat(document.getElementById("input2").value);
+                var multi = input1 * input2;
+                document.getElementById("result").innerHTML = "The Result is : " + multi;
+            }
+            function division(input1,input2){
+                var input1 = parseFloat(document.getElementById("input1").value);
+                var input2 = parseFloat(document.getElementById("input2").value);
+                if (input2==0){
+                    document.getElementById("result").innerHTML = "Cannot divide by zero";
+                }
+                var div = input1 / input2;
+                document.getElementById("result").innerHTML = "The Result is : " + div;
+            }
+
+        </script>
+    
+</body></html>

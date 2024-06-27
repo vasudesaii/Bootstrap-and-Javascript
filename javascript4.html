@@ -1,0 +1,20 @@
+<html>
+<title>Task 4 : Date and Time</title>
+	<body>
+        <script>
+            function displayDate() {
+                document.getElementById('date').innerHTML = new Date().toDateString();
+            }
+            function displayTime() {
+                document.getElementById('time').innerHTML = new Date().toString();
+            }
+
+        </script>
+
+        <h1> Date and Time </h1>
+        <button onclick="displayDate()">Show Date</button>
+        <p id="date"></p><br><br>
+        <button onclick="displayTime()">Show Time</button>
+        <p id="time"></p>
+    
+</body></html>
